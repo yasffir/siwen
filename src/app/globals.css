@@ -34,3 +34,106 @@ input:-webkit-autofill:focus {
   box-shadow: 0 0 0 1000px var(--paper) inset;
   transition: background-color 9999s ease-out;
 }
+
+/* Icon motion stays off when the system asks for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .icon-motion {
+    transform-origin: center;
+    animation-duration: 2.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  .icon-motion-habits {
+    animation-name: icon-habits;
+  }
+
+  .icon-motion-training {
+    animation-name: icon-training;
+    animation-duration: 2.4s;
+  }
+
+  .icon-motion-running {
+    animation-name: icon-running;
+    animation-duration: 0.7s;
+  }
+
+  .icon-motion-meals {
+    animation-name: icon-meals;
+    animation-duration: 3.2s;
+  }
+
+  .icon-motion-sleep {
+    animation-name: icon-sleep;
+    animation-duration: 4.2s;
+  }
+
+  .icon-motion-fasting {
+    animation-name: icon-fasting;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes icon-habits {
+  0%,
+  64%,
+  100% {
+    transform: scale(1);
+  }
+  76% {
+    transform: scale(1.14);
+  }
+  86% {
+    transform: scale(0.96);
+  }
+}
+
+@keyframes icon-training {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-0.08em) rotate(-8deg);
+  }
+}
+
+@keyframes icon-running {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-0.11em);
+  }
+  70% {
+    transform: translateY(0.02em);
+  }
+}
+
+@keyframes icon-meals {
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes icon-sleep {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.06em);
+  }
+}
+
+@keyframes icon-fasting {
+  to {
+    transform: rotate(360deg);
+  }
+}
