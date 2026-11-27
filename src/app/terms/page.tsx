@@ -4,7 +4,7 @@ import { readLegal } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "The agreement for using Steady.",
+  description: "The agreement for using Siwen.",
 };
 
 export default function TermsPage() {

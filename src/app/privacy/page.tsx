@@ -4,7 +4,7 @@ import { readLegal } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Steady handles what you put into the app.",
+  description: "How Siwen handles what you put into the app.",
 };
 
 export default function PrivacyPage() {

@@ -36,6 +36,10 @@ export function parseLegal(raw: string): LegalDocument {
 
   while (index < lines.length && lines[index].trim() === "") index += 1;
 
+  if (/^https?:\/\/\S+$/.test(lines[index]?.trim() ?? "")) index += 1;
+
+  while (index < lines.length && lines[index].trim() === "") index += 1;
+
   const meta = lines[index]?.trim() ?? "";
   const metaMatch = meta.match(/^Last updated:\s*(.+?)\.\s*Version\s+(\d+)\.?$/);
   if (metaMatch) {
