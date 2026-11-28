@@ -62,6 +62,12 @@ export function Statement() {
       <p className="mt-6 text-[clamp(0.95rem,1.5vw,1.15rem)] leading-snug font-normal text-[var(--muted)]">
         Siwen opens soon.
       </p>
+      <a
+        href="mailto:support@siwen.app"
+        className="mt-3 text-sm text-[var(--muted)] underline decoration-[var(--line)] underline-offset-4 hover:text-[var(--ink)] hover:decoration-[var(--ink)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--ink)]"
+      >
+        support@siwen.app
+      </a>
     </div>
   );
 }
